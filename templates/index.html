@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Store Management</title>
+</head>
+<body>
+    <h1>Welcome to Apollo Medical Store</h1>
+    <ul>
+        <li><a href="{{ url_for('add_medicine') }}">Add Medicine</a></li>
+        <li><a href="{{ url_for('display_medicine') }}">Display Medicines</a></li>
+        <li><a href="{{ url_for('search_medicine') }}">Search Medicine</a></li>
+        <li><a href="{{ url_for('expiry_stock') }}">Check Expiry Stock</a></li>
+        <li><a href="{{ url_for('display_companywise') }}">Display Medicines by Company</a></li>
+        <li><a href="{{ url_for('delete_medicine') }}">Delete Medicine</a></li>
+        <li><a href="{{ url_for('add_newbill') }}">Add New Bill</a></li>
+        <li><a href="{{ url_for('display_bill') }}">Display Bills</a></li>
+        <li><a href="{{ url_for('search_bill') }}">Search Bill</a></li>
+    </ul>
+</body>
+</html>
