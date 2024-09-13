@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expiry Stock</title>
+</head>
+<body>
+    <h1>Expired Medicines</h1>
+    <table border="1">
+        <tr>
+            <th>Product Code</th>
+            <th>Name</th>
+            <th>Expiry Date</th>
+            <th>Batch</th>
+        </tr>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock[0] }}</td>
+            <td>{{ stock[1] }}</td>
+            <td>{{ stock[2] }}</td>
+            <td>{{ stock[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Medicines</title>
+</head>
+<body>
+    <h1>Medicines in Stock</h1>
+    <table border="1">
+        <tr>
+            <th>Product Code</th>
+            <th>Name</th>
+            <th>Packing</th>
+            <th>Expiry Date</th>
+            <th>Company</th>
+            <th>Batch</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+        </tr>
+        {% for medicine in medicines %}
+        <tr>
+            <td>{{ medicine[0] }}</td>
+            <td>{{ medicine[1] }}</td>
+            <td>{{ medicine[2] }}</td>
+            <td>{{ medicine[3] }}</td>
+            <td>{{ medicine[4] }}</td>
+            <td>{{ medicine[5] }}</td>
+            <td>{{ medicine[6] }}</td>
+            <td>{{ medicine[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Bill</title>
+</head>
+<body>
+    <h1>Add New Bill</h1>
+    <form method="post">
+        <label>Bill Number:</label><br>
+        <input type="text" name="BillNumber" required><br>
+        <label>Customer Name:</label><br>
+        <input type="text" name="name" required><br>
+        <label>Doctor Name:</label><br>
+        <input type="text" name="DoctorName" required><br>
+        <label>Product Code:</label><br>
+        <input type="text" name="Productcode" required><br>
+        <label>Quantity:</label><br>
+        <input type="text" name="Quantity" required><br>
+        <input type="submit" value="Add Bill">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Medicine</title>
+</head>
+<body>
+    <h1>Add Medicine</h1>
+    <form method="post">
+        <label>Product Code:</label><br>
+        <input type="text" name="ProductCode" required><br>
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br>
+        <label>Packing:</label><br>
+        <input type="text" name="Packing"><br>
+        <label>Expiry Date (yyyy-mm-dd):</label><br>
+        <input type="text" name="ExpiryDate"><br>
+        <label>Company:</label><br>
+        <input type="text" name="Company"><br>
+        <label>Batch:</label><br>
+        <input type="text" name="Batch"><br>
+        <label>Quantity:</label><br>
+        <input type="text" name="Quantity"><br>
+        <label>Rate:</label><br>
+        <input type="text" name="Rate"><br>
+        <input type="submit" value="Add Medicine">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

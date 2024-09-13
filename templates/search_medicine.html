@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Medicine</title>
+</head>
+<body>
+    <h1>Search Medicine</h1>
+    <form method="post">
+        <label>Medicine Name:</label><br>
+        <input type="text" name="med_name" required><br>
+        <input type="submit" value="Search">
+    </form>
+    {% if medicines is not none %}
+    <table border="1">
+        <tr>
+            <th>Product Code</th>
+            <th>Name</th>
+            <th>Packing</th>
+            <th>Expiry Date</th>
+            <th>Company</th>
+            <th>Batch</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+        </tr>
+        {% for medicine in medicines %}
+        <tr>
+            <td>{{ medicine[0] }}</td>
+            <td>{{ medicine[1] }}</td>
+            <td>{{ medicine[2] }}</td>
+            <td>{{ medicine[3] }}</td>
+            <td>{{ medicine[4] }}</td>
+            <td>{{ medicine[5] }}</td>
+            <td>{{ medicine[6] }}</td>
+            <td>{{ medicine[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No results found</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
